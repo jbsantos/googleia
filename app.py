@@ -19,7 +19,7 @@ CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
 # Configuração do MySQL
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
    'DATABASE_URL',
-   'mysql+pymysql://igreja_user:Jb141186@localhost:3306/igreja_db?charset=utf8mb4'
+   'mysql+pymysql://igreja:123456@localhost:3306/igreja_db?charset=utf8mb4'
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'sua-chave-secreta-aqui')
